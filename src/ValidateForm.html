@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is an example of how to validate form by js</title>
+    <script language="JavaScript">
+        function validate()
+        {
+            var userName = document.forms[0].username.value;
+            var password = document.forms[0].password.value;
+            var password2 = document.forms[0].rePassword.value;
+
+            if (userName.length <= 0)
+            {
+                alert("Username could not be empty");
+
+            }
+            else if (password.length <= 0)
+            {
+                alert("Password could not be empty");
+            }
+            else if (password2.length <= 0)
+            {
+                alert("Retype password could not be empty");
+            }
+            else if (userName.length < 6)
+            {
+                alert("Username should be greater than 6 chars");
+            }
+            else if (password != password2)
+            {
+                alert("Passwords do not match");
+            }
+            else
+            {
+                alert("Everything is fine. Form is submitted.");
+                document.forms[0].submit();
+            }
+
+        }
+    </script>
+</head>
+<body>
+<form action="" method="post">
+    Username: <input type="text" name="username"><br>
+    Password: <input type="password" name="password"><br>
+    Re-type Password: <input type="password" name="rePassword"> <br>
+    Gender: <input type="radio" name="sex" value="male">Male
+            <input type="radio" name="sex" value="female">Female <br>
+    DoB: <select name="birthDay">Year
+    <option value="0"> Please choose </option>
+    <option value="1981"> 1981 </option>
+    <option value="1982"> 1982 </option>
+    <option value="1983"> 1983 </option>
+    <option value="1984"> 1984 </option>
+    <option value="1985"> 1985 </option>
+    <option value="1986"> 1986 </option>
+</select><br>
+    Interest: <input name="habit" type="checkbox" value="music">Music
+            <input name="habit" type="checkbox" value="comic">Comic
+            <input name="habit" type="checkbox" value="movie">Movie
+    <br>
+
+    <input type="button" value="Submit" onclick="validate()">
+    <input type="reset" value="Undo">
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Three types of window dialog</title>
+    <script language="JavaScript" >
+        function alertDialog()
+        {
+            alert("Yes, you are good to alert me.");
+        }
+        function confirmDialog()
+        {
+            if (window.confirm("Are you sure to pick up this choose?"))
+            {
+                alert("Yes, OK");
+            }
+            else
+            {
+                alert("No, OK");
+            }
+        }
+
+        function promptDialog()
+        {
+            var input = window.prompt("Type something here: ");
+            if (input != null)
+            {
+                alert("You typed :" + input);
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="Try Alter dialog" onclick="alertDialog()">
+<input type="button" value="Try Confirm dialog" onclick="confirmDialog()">
+<input type="button" value="Try Prompt dialog" onclick="promptDialog()">
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create and close window example</title>
+    <script language="javascript" >
+        var win;
+        function createWin()
+        {
+            win = window.open("","","width=300, height=200");
+        }
+        function closeWin()
+        {
+            if (win)
+            {
+                win.close();
+            }
+        }
+    </script>
+</head>
+<body>
+<form>
+    <input type="button" value="create a new window" onclick="createWin()">
+    <input type="button" value="close this window" onclick="closeWin()">
+</form>
+
+
+</body>
+</html>

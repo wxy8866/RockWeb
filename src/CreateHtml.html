@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create html dynamically</title>
+    <script language="javascript">
+        function create()
+        {
+            var htmlContent = "<html><head><title>This is a dynamically created html file</title></head>";
+            htmlContent += "<body><h1><font size='2'><b>This content is created in runtime by document obj dynamically</b></font></h1> ";
+            htmlContent += "</body></html>";
+
+            var newWindow = window.open();
+            newWindow.document.write(htmlContent);
+            newWindow.document.close();
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="Create a html" onclick="create()">
+</body>
+</html>
