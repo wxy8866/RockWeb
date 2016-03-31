@@ -26,7 +26,7 @@
 <html>
 <head>
     <title>Sum by JSP example</title>
-    <script language="text/JavaScript">
+    <script language="javascript">
         function check()
         {
             if (this.document.forms[0].firstNumInput.value.length == 0 )
@@ -39,7 +39,7 @@
             }
             else if (isNaN(this.document.forms[0].firstNumInput.value) || isNaN(this.document.forms[0].secNumInput.value))
             {
-                alert("All inputs must be a integer");
+                alert("All inputs must be an integer");
             }
             else
                     this.document.forms[0].submit();
