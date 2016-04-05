@@ -18,10 +18,10 @@
 </form>
 
 <%
-    String getUsername, getPassowrd;
+    String getUsername, getPassword;
     getUsername = request.getParameter("username");
-    getPassowrd = request.getParameter("password");
-    if (getUsername != null && getPassowrd!=null && getUsername.length()>0 && getPassowrd.length()>0)
+    getPassword = request.getParameter("password");
+    if (getUsername != null && getPassowrd!=null && getUsername.length()>0 && getPassword.length()>0)
     {
         out.println("the value of username is " + request.getParameter("username") + "<br>");
         out.println("the value of password is " + request.getParameter("password") + "<br>");

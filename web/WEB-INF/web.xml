@@ -3,4 +3,45 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <servlet>
+        <servlet-name>HelloWorld</servlet-name>
+        <servlet-class>com.wxy8866.fromzero.servlets.HelloWorld</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AcceptForm</servlet-name>
+        <servlet-class>com.wxy8866.fromzero.servlets.AcceptForm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AcceptLink</servlet-name>
+        <servlet-class>com.wxy8866.fromzero.servlets.AcceptLink</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FileRead</servlet-name>
+        <servlet-class>com.wxy8866.fromzero.servlets.FileRead</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FileWrite</servlet-name>
+        <servlet-class>com.wxy8866.fromzero.servlets.FileWrite</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/helloworld</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AcceptLink</servlet-name>
+        <url-pattern>/acceptlink</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AcceptForm</servlet-name>
+        <url-pattern>/acceptform</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileRead</servlet-name>
+        <url-pattern>/fileread</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileWrite</servlet-name>
+        <url-pattern>/filewrite</url-pattern>
+    </servlet-mapping>
 </web-app>
