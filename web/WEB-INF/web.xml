@@ -23,7 +23,48 @@
         <servlet-name>FileWrite</servlet-name>
         <servlet-class>com.wxy8866.fromzero.servlets.FileWrite</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>RequestHeader</servlet-name>
+        <servlet-class>com.wxy8866.fromzero.servlets.RequestHeader</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RequestInfo</servlet-name>
+        <servlet-class>com.wxy8866.fromzero.servlets.RequestInfo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RequestParam</servlet-name>
+        <servlet-class>com.wxy8866.fromzero.servlets.RequestParam</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MyCookies</servlet-name>
+        <servlet-class>com.wxy8866.fromzero.servlets.MyCookies</servlet-class>
+    </servlet>
+
+    <filter>
+        <filter-name>IPFilter</filter-name>
+        <filter-class>com.wxy8866.fromzero.filters.IPFilter</filter-class>
+        <init-param>
+            <param-name>IP</param-name>
+            <param-value></param-value>
+        </init-param>
+    </filter>
+
+    <servlet-mapping>
+        <servlet-name>MyCookies</servlet-name>
+        <url-pattern>/mycookies</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestParam</servlet-name>
+        <url-pattern>/requestparam</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestHeader</servlet-name>
+        <url-pattern>/requestheader</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestInfo</servlet-name>
+        <url-pattern>/requestinfo</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>HelloWorld</servlet-name>
         <url-pattern>/helloworld</url-pattern>
@@ -44,4 +85,9 @@
         <servlet-name>FileWrite</servlet-name>
         <url-pattern>/filewrite</url-pattern>
     </servlet-mapping>
+
+    <filter-mapping>
+        <filter-name>IPFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
